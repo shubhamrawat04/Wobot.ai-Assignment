@@ -1,0 +1,320 @@
+:root {
+    --main: #3265dd;
+    --inputColor: #e3e3e3;
+    --textColor: #272727;
+    --mainBgColor: #f7f7f7;
+    --sideShadeColor: #d7f0ef;
+    --middleShadeolor: #f3f3f3;
+}
+
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    color: var(--textColor);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.get-started-bg {
+    background-color: var(--mainBgColor);
+    z-index: -999;
+    position: relative;
+    height: 780px;
+    overflow: hidden;
+}
+
+.back-box-rotate {
+    position: absolute;
+    height: 450px;
+    width: 100%;
+    top: 25%;
+    transform: skewY(-30deg);
+}
+
+.middle-shade {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--middleShadeolor);
+}
+
+.side-shade {
+    position: absolute;
+    width: 50%;
+    height: 3%;
+    background-color: var(--sideShadeColor);
+    animation: blink 4s infinite;
+}
+
+@keyframes blink {
+    0% {
+        background-color: var(--sideShadeColor);
+
+    }
+
+    50% {
+        background-color: var(--main);
+
+    }
+
+    100% {
+        background-color: var(--sideShadeColor);
+
+    }
+
+}
+
+.side-shade-top {
+    top: 0;
+    left: 0;
+}
+
+.side-shade-bottom {
+    bottom: 0;
+    right: 0;
+}
+
+.footer {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.policies {
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#main-logo {
+    z-index: 1;
+    position: absolute;
+    width: 200px;
+    top: 20px;
+    left: 40px;
+    animation: bounceInDown 2s ;
+}
+
+.content-box {
+    position: absolute;
+    left: 50%;
+    top: 400px;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    max-height: 600px;
+    width: 600px;
+    margin: auto;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 1px 1px 15px #d0d0d0;
+}
+
+#secondary-logo {
+    padding-top: 20px;
+}
+
+.logo-div {
+    transform: rotate(-30deg);
+    display: inline-block;
+    width: 12px;
+    height: 45px;
+    border-radius: 10px;
+    background-color: var(--main);
+    margin-top: 10px;
+    
+}
+.logo-div:hover{
+    background-color: rgb(155, 155, 163);
+    
+}
+
+
+.logo-div-left {
+    height: 30px;
+    margin-bottom: 4px;
+    animation:bounceInDown 1s ;
+}
+
+.logo-div-middle{
+    margin-bottom: 5px;
+    animation:bounceInDown 1.1s ;
+}
+
+.logo-div-right {
+    margin-bottom: 24px;
+    height: 25px;
+    animation:bounceInDown 1.3s ;
+
+}
+
+.content-header {
+    width: 75%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.content-header * {
+    text-shadow: .1px .1px 20px rgb(226, 226, 226);
+}
+
+.content-header>h1 {
+    width: 75%;
+    margin: auto;
+    font-size: 28px;
+    animation: fadeIn 3s ;
+
+}
+.content-header> p {
+    animation:fadeIn 4s ;
+    
+}
+
+.form {
+    animation:fadeIn 4s ;
+    z-index: 999;
+    width: 65%;
+    margin: auto;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.form * {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+
+}
+
+form>div>label {
+    font-size: 17px;
+    color: rgb(16, 15, 15);
+
+}
+
+.input-info {
+    border-radius: 4px;
+    padding: 8px;
+    border: 1px solid #898989;
+    color: #898989;
+
+}
+
+#industry {
+    cursor: pointer;
+
+}
+
+::placeholder {
+    color: #898989;
+}
+
+#company-size-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.size-btn {
+
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 5px 15px;
+    transition: all 1s linear;
+}
+
+.size-btn:active {
+    background: olive;
+}
+
+.size-btn:hover {
+    background-color: var(--sideShadeColor);
+    transition: all .5s linear;
+}
+
+.size-btn.active {
+    background-color: var(--main);
+    color: var(--mainBgColor);
+}
+
+.get-started-btn {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    color: var(--mainBgColor);
+    background-color: var(--main);
+    font-size: 17px;
+    padding: 8px;
+    align-items: center;
+    transition: all .3s linear;
+}
+.get-started-btn:hover{
+    transition: all .3s linear;
+    background-color: rgb(9, 67, 227);
+}
+
+@media screen and (max-width:800px) {
+    .content-box {
+        width: 500px;
+
+    }
+
+    .size-btn {
+        font-size: 15px;
+        padding: 5px 10px;
+
+    }
+
+    .content-header {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .content-box {
+        top:380px;
+        border-radius: 0;
+        width: 100%;
+        opacity: .9;
+
+    }
+
+    #main-logo {
+        width: 150px;
+        top: 20px;
+        left: 20px;
+    }
+    .content-header{
+        padding-top: 30px;
+    }
+    .content-header>h1 {
+        font-size: 22px;
+    }
+
+    .content-header>p {
+        font-size: 13px;
+    }
+
+    .form {
+        padding-top: 30px;
+
+    }
+
+    .size-btn {
+        font-size: 11px;
+        padding: 5px 9px;
+
+    }
+    .footer {
+
+        bottom: 45px;
+    }
+
+}
